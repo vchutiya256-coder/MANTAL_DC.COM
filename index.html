@@ -1,11 +1,92 @@
-<meta name="description" content="Baharul Islam Tapadar - MENTAL DC LAB Owner">
-<meta property="og:image" content="https://raw.githubusercontent.com/vchutiya256-coder/MANTAL_DC.COM/main/baharul.jpg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Baharul Islam Tapadar",
-  "image": "https://raw.githubusercontent.com/vchutiya256-coder/MANTAL_DC.COM/main/baharul.jpg",
-  "url": "https://vchutiya256-coder.github.io/MANTAL_DC.COM/"
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MENTAL DC LAB - 500 Photos - Baharul Islam</title>
+<meta name="description" content="Baharul Islam Tapadar - MENTAL DC LAB - 500+ DC Painter Photos - 9372339021">
+<meta name="keywords" content="MENTAL DC LAB, DC painter, Baharul Islam, MANTAL DC, 500 photos">
+<meta property="og:image" content="https://raw.githubusercontent.com/vchutiya256-coder/MANTAL_DC.COM/main/photos/baharul.jpg">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#fff;font-family:Arial}
+.top{position:fixed;top:0;left:0;right:0;height:60px;background:#111;display:flex;align-items:center;justify-content:space-between;padding:0 12px;border-bottom:2px solid #00ff88;z-index:100}
+.hero{text-align:center;margin-top:70px;padding:10px}
+#heroPP{width:120px;height:120px;border-radius:50%;border:4px solid #00ff88;object-fit:cover}
+.uploadBox{max-width:700px;margin:10px auto;background:#111;border:2px dashed #00ff88;border-radius:14px;padding:12px;text-align:center}
+.gallery{max-width:800px;margin:10px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:6px}
+.gItem{aspect-ratio:1/1;background:#111;border:2px solid #222;border-radius:10px;overflow:hidden;position:relative}
+.gItem img{width:100%;height:100%;object-fit:cover}
+.gItem:hover{border-color:#00ff88;transform:scale(1.02)}
+.count{position:fixed;bottom:10px;right:10px;background:#00ff88;color:#000;padding:8px 14px;border-radius:20px;font-weight:900;z-index:200}
+.btn{padding:10px 16px;background:gold;color:#000;font-weight:900;border:0;border-radius:10px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="top">
+<div style="display:flex;align-items:center;gap:8px">
+<img src="https://raw.githubusercontent.com/vchutiya256-coder/MANTAL_DC.COM/main/photos/baharul.jpg" onerror="this.src='https://i.imgur.com/8Km9tLL.png'" style="width:44px;height:44px;border-radius:50%;border:2px solid #00ff88;object-fit:cover">
+<b style="color:#00ff88">MENTAL DC LAB - 500 PHOTO</b>
+</div>
+<div style="background:#00ff88;color:#000;padding:4px 10px;border-radius:20px;font-weight:900;font-size:12px" id="countTop">0 PHOTO</div>
+</div>
+
+<div class="hero">
+<img id="heroPP" src="https://raw.githubusercontent.com/vchutiya256-coder/MANTAL_DC.COM/main/photos/baharul.jpg" onerror="this.src='https://i.imgur.com/8Km9tLL.png'">
+<div style="font-weight:900;color:#00ff88;margin-top:8px;font-size:18px">Baharul Islam Tapadar</div>
+<div style="font-size:12px;background:#00ff88;color:#000;display:inline-block;padding:3px 10px;border-radius:20px;font-weight:900;margin-top:4px">9372339021 - DC PAINTER</div>
+</div>
+
+<div class="uploadBox">
+<div style="color:#00ff88;font-weight:900">📸 500 PHOTO UPLOAD SYSTEM</div>
+<div style="font-size:11px;color:#aaa;margin:6px 0">GitHub me ek baar me 500 photo daal sakte ho - niche auto dikhega</div>
+<div style="font-size:10px;color:gold;background:#222;padding:6px;border-radius:8px;margin-top:6px;text-align:left">
+<b>500 PHOTO KAISE DALNA HAI:</b><br>
+1. GitHub repo me <b>Add file > Upload files</b> dabao<br>
+2. Apne phone se <b>500 photo ek saath select karo</b> - drag karke daal do<br>
+3. Neeche ek box ayega - usme folder naam likho: <b>photos/</b><br>
+4. Fir <b>Commit changes</b> dabao - 5 min me sab photo site pe aa jayega!
+</div>
+<button class="btn" style="background:#00ff88;margin-top:10px" onclick="loadPhotos()">🔄 REFRESH GALLERY</button>
+</div>
+
+<div id="gallery" class="gallery"></div>
+<div id="noPhoto" style="text-align:center;color:#666;padding:20px">Loading 500 photos... Agar photo nahi dikh raha to GitHub me photos folder me upload karo</div>
+
+<div class="count" id="countBot">0 PHOTO LOADED</div>
+
+<script>
+async function loadPhotos(){
+let user="vchutiya256-coder", repo="MANTAL_DC.COM";
+let api=`https://api.github.com/repos/${user}/${repo}/contents/photos`;
+let gal=document.getElementById('gallery');
+let no=document.getElementById('noPhoto');
+try{
+let res=await fetch(api);
+if(!res.ok){no.innerHTML="Abhi 'photos' folder me koi photo nahi hai BOSS.<br>GitHub me jake 500 photo upload karo.";return;}
+let data=await res.json();
+if(!Array.isArray(data) || data.length==0){no.innerHTML="photos folder khali hai - 500 photo daalo";return;}
+gal.innerHTML=""; no.style.display="none";
+let count=0;
+data.forEach(f=>{
+if(f.name.match(/\.(jpg|jpeg|png|webp)$/i)){
+count++;
+let div=document.createElement('div'); div.className='gItem';
+div.innerHTML=`<img src="${f.download_url}" loading="lazy" onerror="this.style.display='none'"><div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.7);font-size:8px;padding:2px;text-align:center">${f.name}</div>`;
+gal.appendChild(div);
 }
+});
+document.getElementById('countTop').innerText=count+" PHOTO";
+document.getElementById('countBot').innerText=count+" PHOTO LOADED - MENTAL DC";
+if(count>=1){
+let first=data.find(f=>f.name.match(/jpg|png/i));
+if(first){document.getElementById('heroPP').src=first.download_url;}
+}
+}catch(e){
+no.innerHTML="Photo load nahi hua - GitHub API limit. 1 min baad Refresh dabao. Error: "+e.message;
+}
+}
+loadPhotos();
 </script>
+</body>
+</html>
