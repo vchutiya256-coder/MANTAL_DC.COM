@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MANTAL DC FINAL</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Roboto,Arial;user-select:text!important;-webkit-user-select:text!important}
+body{background:#f0ebf8}
+.card{max-width:640px;margin:12px auto;background:#fff;border-radius:8px;box-shadow:0 1px 3px #0003;overflow:hidden;border-top:8px solid #673ab7}
+.pad{padding:20px}
+.page{display:none}.page.active{display:block}
+.bar{height:10px;background:#e1dbe8;border-radius:20px;flex:1;overflow:hidden}
+.fill{height:100%;background:#673ab7}
+.prog{display:flex;align-items:center;gap:10px;max-width:640px;margin:8px auto;padding:0 8px;font-size:13px;color:#5f6368}
+.btn{padding:10px 24px;border:none;border-radius:4px;font-weight:700}
+.next{background:#673ab7;color:#fff}.back{background:#fff;border:1px solid #dadce0;color:#673ab7}
+.qr{width:100%;max-width:340px;display:block;margin:12px auto;border-radius:8px;border:1px solid #eee}
+.link-btn{display:block;padding:15px;border-radius:30px;text-decoration:none;font-weight:700;margin:10px 0;text-align:center;color:#fff}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div id="p1" class="page active">
+<div class="card"><div class="pad">
+<h2>WELCOME MY SITE<br>....MANTAL DC....</h2>
+<div style="line-height:30px;font-size:15px;margin:15px 0">
+👑Features<br>
+👑UPDATED PAK]<br>
+🔥AIMB@T 280°<br>
+🔥LOCATION ALL<br>
+🔥WALL HACK REAL<br>
+🔥RED + GREEN COOL<br>
+🔥ESP LOCATION BOX MARK<br>
+🔥PREMIUM X EFFECT<br>
+🔥COLLOUR BODY<br>
+🔥SMALLCROSSAIR NEW<br>
+🔥FULL HEADSHOT 100%<br>
+🔥LESS RECOIL<br>
+🔥NO GRASS, NO FOG<br>
+🔥LONG RANGE FIX<br>
+🔥120 FPS UNLOCK<br>
+🔥MAIN AC SAFE 10001%<br>
+🚀JOIN FOR VIP GROUP<br>
+</div>
+</div></div>
+<div class="prog"><div class="bar"><div class="fill" style="width:33%"></div></div>Page 1 of 3</div>
+<div style="max-width:640px;margin:0 auto;display:flex;justify-content:flex-end;padding:0 8px"><button class="btn next" onclick="go(2)">Next</button></div>
+</div>
+
+<!-- PAGE 2 -->
+<div id="p2" class="page">
+<div class="card"><div class="pad">
+<b>ph, 9372339021 *</b>
+<img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=upi://pay?pa=9372339021@ptyes">
+<p style="text-align:center;color:#666;font-size:12px;margin:5px">PhonePe - 9372339021 - Long press se copy karo</p>
+
+<!-- FINAL LINKS BOSS -->
+<a href="tel:9372339021" class="link-btn" style="background:#000">📞 CALL ME - 9372339021</a>
+<a href="https://wa.me/919372339021?text=Hello%20BOSS%20MANTAL%20DC%20File%20Chahiye" class="link-btn" style="background:#25D366">💬 WHATSAPP - JJ LINK</a>
+<a href="upi://pay?pa=9372339021@ptyes&pn=MANTAL%20DC" class="link-btn" style="background:#673ab7">💸 PAY NOW - UPI</a>
+
+</div></div>
+<div class="prog"><div class="bar"><div class="fill" style="width:66%"></div></div>Page 2 of 3</div>
+<div style="max-width:640px;margin:
